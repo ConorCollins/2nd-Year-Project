@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load static %}
+{% load auth_extras %}
+{% block metadescription %}
+{% if category %}
+{{ category.name|truncatewords:50 }}
+{% else %}
+Welcome to Movies @ TUD
+{% endif %}
+{% endblock %}
+{% block title %}
+{% if category %}
+{{ category.name }} Movies - Movies@TUD
+{% else %}
+Our Film Collection - Movies@TUD
+{% endif %}
+{% endblock %}
+{% block content %}
+
+{% include 'slideshow.html' %}
+
+<!--Breadcrumb navigation-->
+{% if category %}
+<div class="row my_row_class">
+    <div class="mx-auto">
+        <p><a href="{% url 'cinema:all_products' %}">Our Film Collection</a> | {{category.name}}</p>
+    </div>
+</div>
+{% endif %}
+
+{% if category %}
+<br>
+<div class="text-center">
+    <h1 class="my_title fs-2">{{category.name}} Movies</h1>
+    {% if user|has_group:"Admin" %}
+        <a href="{% url 'cinema:category_delete' category.id %}" class="btn btn-danger">Delete Category</a>
+    {% endif %}
+</div>
+{% else %}
+</div>
+<br>
+<div>
+    <h1 class="text-center my_title mt-3 fs-2">Our Film Collection</h1>
+</div>
+{% endif %}
+
+<div class="movie-collection product-container">
+    <div class="row mx-auto">
+        {% for product in prods %}
+        <div class="my_bottom_margin col-9 col-lg-3 col-sm-12 col-md-4">
+            <div class="card text-center invis_bg" style="min-width:18rem;">
+                <a class="img" href="{{product.get_absolute_url}}"><img class="card-img-top rounded-0" src="{{product.image.url}}" alt="{{product.name}}"></a>
+                <div class="card-body">
+                    <h4 class="text-white">{{product.name}}</h4>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="mx-auto">
+        {% if prods.paginator.num_pages > 1 %}
+        <hr>
+        <div class="text-center">
+            {% for pg in prods.paginator.page_range %}
+            <a href="?page={{pg}}"
+                class="btn btn-sm btn-light invis_bg text-white {%if products.number == pg %}active{% endif %}">{{pg}}</a>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+    <br>
+</div>
+
+
+{% endblock %}

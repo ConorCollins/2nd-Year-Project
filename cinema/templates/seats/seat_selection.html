@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block metadescription %}
+This is the seat selection page. Proceed to select any available seats you would like.
+{% endblock %}
+{% block title %}
+Seats - {{ screening.movie.name }} - {{ screening.date }} - {{ screening.time }}
+{% endblock %}
+{% block content %}
+<div class="container text-center">
+
+  <br>
+  <h1>Choose your seats:</h1>
+  <p>Screening: {{ screening.movie.name }} - {{ screening.date }} - {{ screening.time }}</p>
+  <br>
+
+  <form action="{% url 'cart:movie_add_cart' screening.id %}" method="POST">
+    {% csrf_token %}
+
+    <table class="center">
+
+      {% for seat in seats %}
+
+      <th>
+        <div class="m-2" style="display:flex; flex-direction:column; align-items:center;">
+          {% if not seat.is_available %}
+            <i class="fa-solid fa-couch fa-2xl mb-2" style="color: #fe4545;"></i>
+            <label><input type="checkbox" name="seats" id="{{ seat.number }}" value="{{ seat.number }}" disabled>{{ seat }}</label>
+          {% else %}
+            <i class="fa-solid fa-couch fa-2xl mb-2" style="color: #6cff6c;"></i>
+            <label><input type="checkbox" name="seats" id="{{ seat.number }}" value="{{ seat.number }}">{{ seat }}</label>
+          {% endif %}
+        </div>
+      </th>
+
+
+      {% if seat.number in gap %}
+        <td class="text-black">___</td>
+      {% endif %}
+
+      {% if seat.number in rowEnd %}
+        <tr></tr>
+      {% endif %}
+
+      {% endfor %}
+    </table>
+
+    <br><br>
+    <button class="btn btn-secondary text-white rounded-0 col-2" disabled>Screen</button>
+    <br><br><br>
+
+    {% if request.user.is_authenticated %}
+      <br>
+      <input class="btn btn-primary" type="submit" value="Reserve Seats">
+    {% else %}
+      <p><a href="{% url 'login' %}">Login</a> to purchase seats.</p>
+    {% endif %}
+    <br>
+
+  </form>
+</div>
+<!--<button><a href="{% url 'cinema:create_seats' screening.id %}">Create seats</button></a>-->
+
+{% endblock %}

@@ -1,0 +1,112 @@
+[
+    {
+        "model": "extras.extra",
+        "pk": "44eb6c21-858f-4c28-80c2-75c08adc03c1",
+        "fields": {
+            "description": "Test",
+            "price": "200.00",
+            "stock": 0,
+            "image": "extra/popcorn.jpg"
+        }
+    },
+    {
+        "model": "extras.extra",
+        "pk": "a7453bf0-1fef-4e12-8672-81d9e9e00d01",
+        "fields": {
+            "description": "Mega Deal",
+            "price": "12.00",
+            "stock": 5,
+            "image": "extra/mega_deal.jpg"
+        }
+    },
+    {
+        "model": "extras.extra",
+        "pk": "9ce38c1d-ae63-434b-8264-29b3fe3732bb",
+        "fields": {
+            "description": "Large Deal",
+            "price": "10.00",
+            "stock": 8,
+            "image": "extra/large_deal.jpg"
+        }
+    },
+    {
+        "model": "extras.extra",
+        "pk": "c93ee1c7-7c51-439b-a69c-574638576fea",
+        "fields": {
+            "description": "Medium Deal",
+            "price": "9.00",
+            "stock": 9,
+            "image": "extra/medium_deal.jpg"
+        }
+    },
+    {
+        "model": "extras.extra",
+        "pk": "07cf79cb-a561-4da8-9216-25e9103ad647",
+        "fields": {
+            "description": "Small Deal",
+            "price": "8.00",
+            "stock": 11,
+            "image": "extra/small_deal.jpg"
+        }
+    },
+    {
+        "model": "extras.extra",
+        "pk": "35bfb443-ce59-446e-a218-d41f6aa1816f",
+        "fields": {
+            "description": "Large Drink",
+            "price": "6.00",
+            "stock": 20,
+            "image": "extra/large_drinks.jpg"
+        }
+    },
+    {
+        "model": "extras.extra",
+        "pk": "7c45badb-0fe1-438b-9ae8-3e8869fb78d1",
+        "fields": {
+            "description": "Large Popcorn",
+            "price": "6.00",
+            "stock": 14,
+            "image": "extra/large_popcorn.jpg"
+        }
+    },
+    {
+        "model": "extras.extra",
+        "pk": "e25f2dc7-f1e7-42bd-9809-b4f0b4d343c4",
+        "fields": {
+            "description": "Medium Drink",
+            "price": "5.00",
+            "stock": 12,
+            "image": "extra/medium_drinks.jpg"
+        }
+    },
+    {
+        "model": "extras.extra",
+        "pk": "2cd788e3-18c9-4379-9570-e871054d14be",
+        "fields": {
+            "description": "Medium Popcorn",
+            "price": "5.00",
+            "stock": 9,
+            "image": "extra/medium_popcorn.jpg"
+        }
+    },
+    {
+        "model": "extras.extra",
+        "pk": "dcea3d5d-244a-4c3f-8179-b2851585c6b8",
+        "fields": {
+            "description": "Small Drink",
+            "price": "5.00",
+            "stock": 16,
+            "image": "extra/small_drinks.jpg"
+        }
+    },
+    {
+        "model": "extras.extra",
+        "pk": "4902b4f5-e22a-4dbe-8d67-d2a316189336",
+        "fields": {
+            "description": "Small Popcorn",
+            "price": "4.00",
+            "stock": 19,
+            "image": "extra/small_popcorn.jpg"
+        }
+    }
+]

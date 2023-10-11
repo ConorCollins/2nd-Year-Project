@@ -1,0 +1,1328 @@
+[
+    {
+        "model": "cinema.category",
+        "pk": "116fa26d-6580-4d1b-a319-8ad526551cb3",
+        "fields": {
+            "name": "Action"
+        }
+    },
+    {
+        "model": "cinema.category",
+        "pk": "c43f5d71-f45e-45c9-8c98-6dd824c667e5",
+        "fields": {
+            "name": "Animated"
+        }
+    },
+    {
+        "model": "cinema.category",
+        "pk": "b9a9ddd4-7feb-458f-96fd-74bba5cb9c02",
+        "fields": {
+            "name": "Comedy"
+        }
+    },
+    {
+        "model": "cinema.category",
+        "pk": "488c4a46-d142-41eb-b948-68e890742c27",
+        "fields": {
+            "name": "Romance"
+        }
+    },
+    {
+        "model": "cinema.category",
+        "pk": "531176c3-4434-4729-9430-2e94b4b9e5fd",
+        "fields": {
+            "name": "Horror"
+        }
+    },
+    {
+        "model": "cinema.product",
+        "pk": "42904639-f4e0-4ee2-af1a-50c25d2cea24",
+        "fields": {
+            "name": "Anchorman 2",
+            "description": "A celebrated news anchor from San Diego, post getting fired by his boss, is hired by New York's first 24-hour news channel where he takes the channel by storm through his new style of news coverage.",
+            "category": "b9a9ddd4-7feb-458f-96fd-74bba5cb9c02",
+            "image": "product/Anchorman2.png",
+            "available": true,
+            "created": "2022-11-09T14:40:37.129Z",
+            "updated": "2022-11-09T14:40:37.129Z",
+            "trailer": "https://www.youtube.com/watch?v=Elczv0ghqw0",
+            "director": "Adam McKay",
+            "cast": "Will Ferrell, Paul Rudd, Steve Carell, David Koechner, Christina Applegate",
+            "length": "1h 59m"
+        }
+    },
+    {
+        "model": "cinema.product",
+        "pk": "172e6390-e195-430e-be07-9de7389f4324",
+        "fields": {
+            "name": "Interstellar",
+            "description": "Earth's future has been riddled by disasters, famines, and droughts. There is only one way to ensure mankind's survival: Interstellar travel. A newly discovered wormhole in the far reaches of our solar system allows a team of astronauts to go where no man has gone before, a planet that may have the right environment to sustain human life.",
+            "category": "116fa26d-6580-4d1b-a319-8ad526551cb3",
+            "image": "product/Intersteller_8o2rzBr.jpg",
+            "available": true,
+            "created": "2023-03-14T12:41:11.914Z",
+            "updated": "2023-03-14T12:41:11.914Z",
+            "trailer": "https://www.youtube.com/watch?v=zSWdZVtXT7E",
+            "director": "Christopher Nolan",
+            "cast": "Matthew McConaughey, Anne Hathaway, Jessica Chastain, Bill Irwin, Ellen Burstyn, Matt Damon, Michael Caine",
+            "length": "2h 49m"
+        }
+    },
+    {
+        "model": "cinema.product",
+        "pk": "b6b7b98b-e860-44e6-bbcc-d3e05c802f3d",
+        "fields": {
+            "name": "Spirited Away",
+            "description": "During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.",
+            "category": "c43f5d71-f45e-45c9-8c98-6dd824c667e5",
+            "image": "product/SpiritedAway.jpg",
+            "available": true,
+            "created": "2022-11-09T14:35:41.801Z",
+            "updated": "2022-11-09T14:35:41.801Z",
+            "trailer": "https://www.youtube.com/watch?v=ByXuk9QqQkk",
+            "director": "Hayao Miyazaki",
+            "cast": "Rumi Hiiragi, Daveigh Chase, Mari Natsuki, Miyu Irino",
+            "length": "2h 5m"
+        }
+    },
+    {
+        "model": "cinema.product",
+        "pk": "262c652c-5718-4135-a805-9d3b9f92dc88",
+        "fields": {
+            "name": "Star Wars: The Force Awakens",
+            "description": "30 years after the defeat of Darth Vader and the Empire, Rey, a scavenger from the planet Jakku, finds a BB-8 droid that knows the whereabouts of the long lost Luke Skywalker. Rey, as well as a rogue stormtrooper and two smugglers, are thrown into the middle of a battle between the Resistance and the daunting legions of the First Order.",
+            "category": "116fa26d-6580-4d1b-a319-8ad526551cb3",
+            "image": "product/StarWars.jpg",
+            "available": true,
+            "created": "2022-11-09T14:36:51.639Z",
+            "updated": "2022-11-09T14:36:51.639Z",
+            "trailer": "https://www.youtube.com/watch?v=sGbxmsDFVnE",
+            "director": "J.J. Abrams",
+            "cast": "Daisy Ridley, John Boyega, Harrison Ford, Adam Driver, Carrie Fisher",
+            "length": "2h 18m"
+        }
+    },
+    {
+        "model": "cinema.product",
+        "pk": "8d8432c2-2456-412c-a9d3-3637f1bb301b",
+        "fields": {
+            "name": "Ted",
+            "description": "John makes a Christmas miracle happen by bringing his one and only friend to life, his teddy bear. The two grow up together and John must then choose to stay with his girlfriend or keep his friendship with his crude and extremely inappropriate teddy bear, Ted.",
+            "category": "b9a9ddd4-7feb-458f-96fd-74bba5cb9c02",
+            "image": "product/ted.jpg",
+            "available": true,
+            "created": "2023-03-13T15:47:51.558Z",
+            "updated": "2023-03-13T15:47:51.558Z",
+            "trailer": "https://www.youtube.com/watch?v=9fbo_pQvU7M",
+            "director": "Seth MacFarlane",
+            "cast": "Mark Wahlberg, Mila Kunis, Jessica Barth, Giovanni Ribisi",
+            "length": "1h 46m"
+        }
+    },
+    {
+        "model": "cinema.product",
+        "pk": "3538774b-eb10-4fc3-a9e5-4ee97ca83271",
+        "fields": {
+            "name": "The Dictator",
+            "description": "The Republic of Wadiya is ruled by an eccentric and oppressive leader named Hafez Aladeen. Aladeen is summoned to New York to a UN assembly to address concerns about his country's nuclear weapons program, but the trip goes awry.",
+            "category": "b9a9ddd4-7feb-458f-96fd-74bba5cb9c02",
+            "image": "product/TheDictator.jpg",
+            "available": true,
+            "created": "2022-11-09T14:31:31.529Z",
+            "updated": "2022-11-09T14:31:31.529Z",
+            "trailer": "https://www.youtube.com/watch?v=BegO9nKUsBY",
+            "director": "Larry Charles",
+            "cast": "Sacha Baron Cohen, Anna Faris, Megan Fox, Jason Mantzoukas, Bobby Lee",
+            "length": "1h 23m"
+        }
+    },
+    {
+        "model": "cinema.product",
+        "pk": "76975e51-0896-45a9-b4bf-44f712ec7f86",
+        "fields": {
+            "name": "The Exorcist",
+            "description": "A visiting actress in Washington, D.C., notices dramatic and dangerous changes in the behavior and physical make-up of her 12-year-old daughter. Meanwhile, a young priest at nearby Georgetown University begins to doubt his faith while dealing with his mother's terminal sickness. And, book-ending the story, a frail, elderly priest recognizes the necessity for a show-down with an old demonic enemy.",
+            "category": "531176c3-4434-4729-9430-2e94b4b9e5fd",
+            "image": "product/TheExorcist.jpg",
+            "available": true,
+            "created": "2022-11-09T14:34:02.081Z",
+            "updated": "2022-11-09T14:34:02.081Z",
+            "trailer": "https://www.youtube.com/watch?v=YDGw1MTEe9k",
+            "director": "William Friedkin",
+            "cast": "Ellen Burstyn, Max von Sydow, Linda Blair, Lee J. Cobb",
+            "length": "2h 2m"
+        }
+    },
+    {
+        "model": "cinema.product",
+        "pk": "1b5e0aeb-c369-4107-8d53-323a753851f0",
+        "fields": {
+            "name": "The Godfather",
+            "description": "Michael, the young and idealistic son of Vito Corleone, the head of the most powerful Mafia clan in New York, returns home as a war hero and is determined to live his own life. But tragic circumstances make him face the legacy of his family.",
+            "category": "116fa26d-6580-4d1b-a319-8ad526551cb3",
+            "image": "product/The_Godfather.jpg",
+            "available": true,
+            "created": "2022-11-09T14:28:17.802Z",
+            "updated": "2022-11-09T14:28:17.802Z",
+            "trailer": "https://www.youtube.com/watch?v=UaVTIH8mujA",
+            "director": "Francis Ford Coppola",
+            "cast": "Marlon Brando, Al Pacino, James Caan, Diane Keaton",
+            "length": "2h 55m"
+        }
+    },
+    {
+        "model": "cinema.product",
+        "pk": "5d01bf86-6b54-4d1a-95fa-0bf027bb6789",
+        "fields": {
+            "name": "The Notebook",
+            "description": "A poor yet passionate young man (Ryan Gosling) falls in love with a rich young woman (Rachel McAdams), giving her a sense of freedom, but they are soon separated because of their social differences.",
+            "category": "488c4a46-d142-41eb-b948-68e890742c27",
+            "image": "product/TheNotebook.jpg",
+            "available": true,
+            "created": "2022-11-09T14:39:07.279Z",
+            "updated": "2022-11-09T16:27:17.785Z",
+            "trailer": "https://www.youtube.com/watch?v=FC6biTjEyZw",
+            "director": "Nick Cassavetes",
+            "cast": "Gena Rowlands, James Garner, Rachel McAdams, Ryan Gosling",
+            "length": "2h 3m"
+        }
+    },
+    {
+        "model": "cinema.product",
+        "pk": "93caa114-4b73-4ba0-aadc-5e4a22344158",
+        "fields": {
+            "name": "The Shining",
+            "description": "A family heads to an isolated hotel for the winter where a sinister presence influences the father into violence, while his psychic son sees horrific forebodings from both past and future.",
+            "category": "531176c3-4434-4729-9430-2e94b4b9e5fd",
+            "image": "product/TheShining.jpg",
+            "available": true,
+            "created": "2022-11-09T14:37:55.896Z",
+            "updated": "2022-11-09T14:37:55.896Z",
+            "trailer": "https://www.youtube.com/watch?v=5Cb3ik6zP2IS",
+            "director": "Stanley Kubrick",
+            "cast": "Jack Nicholson, Shelley Duvall, Danny Lloyd, Scatman Crothers",
+            "length": "2h 26m"
+        }
+    },
+    {
+        "model": "cinema.product",
+        "pk": "6a8f1839-2539-470c-852c-8bbfd8991f5f",
+        "fields": {
+            "name": "Titanic",
+            "description": "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
+            "category": "488c4a46-d142-41eb-b948-68e890742c27",
+            "image": "product/Titanic.jpg",
+            "available": true,
+            "created": "2022-11-09T14:30:11.380Z",
+            "updated": "2022-11-09T14:30:11.380Z",
+            "trailer": "https://www.youtube.com/watch?v=I7c1etV7D7g",
+            "director": "James Cameron",
+            "cast": "Leonardo DiCaprio, Kate Winslet, Billy Zane, Kathy Bates, Frances Fisher",
+            "length": "3h 14m"
+        }
+    },
+    {
+        "model": "cinema.product",
+        "pk": "ca2a5389-ebd7-4462-a5e5-45b3972fda1d",
+        "fields": {
+            "name": "Up",
+            "description": "Up description.",
+            "category": "c43f5d71-f45e-45c9-8c98-6dd824c667e5",
+            "image": "product/UP.jpg",
+            "available": true,
+            "created": "2022-11-09T14:41:33.470Z",
+            "updated": "2022-11-09T14:41:33.470Z",
+            "trailer": "https://www.youtube.com/watch?v=HWEW_qTLSEE",
+            "director": "Pete Docter",
+            "cast": "Edward Asner, Jordan Nagai, John Ratzenberger, Christopher Plummer, Bob Peterson",
+            "length": "1h 36m"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "f67d2442-583a-412f-ab01-a18c38ba01df",
+        "fields": {
+            "movie": "42904639-f4e0-4ee2-af1a-50c25d2cea24",
+            "date": "2023-04-12",
+            "time": "18:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "b8df2534-9c6c-4a36-9575-91fd44d209ce",
+        "fields": {
+            "movie": "42904639-f4e0-4ee2-af1a-50c25d2cea24",
+            "date": "2023-04-13",
+            "time": "20:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "7e1c32e1-4886-4365-ab82-2c16e2882377",
+        "fields": {
+            "movie": "42904639-f4e0-4ee2-af1a-50c25d2cea24",
+            "date": "2023-04-14",
+            "time": "19:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "05568992-ae77-4bf8-961f-8041951ee625",
+        "fields": {
+            "movie": "42904639-f4e0-4ee2-af1a-50c25d2cea24",
+            "date": "2023-04-15",
+            "time": "21:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "fdf43561-a167-4770-ba01-6f92cd82b1af",
+        "fields": {
+            "movie": "42904639-f4e0-4ee2-af1a-50c25d2cea24",
+            "date": "2023-04-21",
+            "time": "21:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "f842cc45-6bb6-4ad6-aca5-473afcb2f23b",
+        "fields": {
+            "movie": "172e6390-e195-430e-be07-9de7389f4324",
+            "date": "2023-04-11",
+            "time": "18:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "340601d0-8cf5-4c2e-85e9-1c806721e5a5",
+        "fields": {
+            "movie": "172e6390-e195-430e-be07-9de7389f4324",
+            "date": "2023-04-13",
+            "time": "21:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "bb20be49-9e37-4333-9f3f-3403cb93bb55",
+        "fields": {
+            "movie": "172e6390-e195-430e-be07-9de7389f4324",
+            "date": "2023-04-18",
+            "time": "20:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "f03a240b-3aca-41f2-9d99-20ba882af0fc",
+        "fields": {
+            "movie": "172e6390-e195-430e-be07-9de7389f4324",
+            "date": "2023-04-09",
+            "time": "20:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "92fb7e95-979c-400e-a088-c9b7850e1a98",
+        "fields": {
+            "movie": "172e6390-e195-430e-be07-9de7389f4324",
+            "date": "2023-04-17",
+            "time": "22:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "e7d05da5-c533-478e-94b0-44045e3990fa",
+        "fields": {
+            "movie": "b6b7b98b-e860-44e6-bbcc-d3e05c802f3d",
+            "date": "2023-04-11",
+            "time": "21:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "b1cb2b57-83b7-43d7-a114-601756a2201a",
+        "fields": {
+            "movie": "b6b7b98b-e860-44e6-bbcc-d3e05c802f3d",
+            "date": "2023-04-12",
+            "time": "20:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "d2b3dc45-f7c3-4e84-ae03-d88865b82929",
+        "fields": {
+            "movie": "b6b7b98b-e860-44e6-bbcc-d3e05c802f3d",
+            "date": "2023-04-14",
+            "time": "21:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "4bdb0777-c52f-4c93-b856-785599e636cc",
+        "fields": {
+            "movie": "b6b7b98b-e860-44e6-bbcc-d3e05c802f3d",
+            "date": "2023-04-16",
+            "time": "21:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "c620384e-4a3e-45bd-b44f-adffb96f98b7",
+        "fields": {
+            "movie": "b6b7b98b-e860-44e6-bbcc-d3e05c802f3d",
+            "date": "2023-04-14",
+            "time": "20:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "4e9e0ff1-adc5-4563-857f-2ffe4ed14fe7",
+        "fields": {
+            "movie": "262c652c-5718-4135-a805-9d3b9f92dc88",
+            "date": "2023-04-19",
+            "time": "18:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "fe2d48cb-3e5a-439b-9819-ebdbba2cee6f",
+        "fields": {
+            "movie": "262c652c-5718-4135-a805-9d3b9f92dc88",
+            "date": "2023-04-15",
+            "time": "16:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "e0080040-a166-4ce0-91df-e00e49f32cf4",
+        "fields": {
+            "movie": "262c652c-5718-4135-a805-9d3b9f92dc88",
+            "date": "2023-04-18",
+            "time": "17:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "d322a0e4-4876-43cc-b26e-3d4539a4eb68",
+        "fields": {
+            "movie": "262c652c-5718-4135-a805-9d3b9f92dc88",
+            "date": "2023-04-18",
+            "time": "22:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "46e3ace6-561a-40e5-a077-7df5e1cc1c77",
+        "fields": {
+            "movie": "262c652c-5718-4135-a805-9d3b9f92dc88",
+            "date": "2023-04-22",
+            "time": "18:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "a5eeabbf-5b7e-4ad1-81a5-7cbadfd9088e",
+        "fields": {
+            "movie": "8d8432c2-2456-412c-a9d3-3637f1bb301b",
+            "date": "2023-04-24",
+            "time": "20:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "c1f89948-045c-47ff-b4c1-49b2200d0580",
+        "fields": {
+            "movie": "8d8432c2-2456-412c-a9d3-3637f1bb301b",
+            "date": "2023-04-18",
+            "time": "21:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "0247face-47d4-4887-9a67-9a719c7b4b9c",
+        "fields": {
+            "movie": "8d8432c2-2456-412c-a9d3-3637f1bb301b",
+            "date": "2023-04-07",
+            "time": "16:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "c69ce351-29db-4bc0-82c8-415e5c0b71e6",
+        "fields": {
+            "movie": "8d8432c2-2456-412c-a9d3-3637f1bb301b",
+            "date": "2023-04-15",
+            "time": "20:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "612f8881-79cd-4114-91a3-954d9b9d6faf",
+        "fields": {
+            "movie": "8d8432c2-2456-412c-a9d3-3637f1bb301b",
+            "date": "2023-04-18",
+            "time": "22:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "fa8856eb-ab85-4c02-ac0a-f1df27abd78a",
+        "fields": {
+            "movie": "3538774b-eb10-4fc3-a9e5-4ee97ca83271",
+            "date": "2023-04-29",
+            "time": "21:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "94de89fc-5232-4156-b46b-c393c439f871",
+        "fields": {
+            "movie": "3538774b-eb10-4fc3-a9e5-4ee97ca83271",
+            "date": "2023-04-19",
+            "time": "21:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "d8eb5d58-b115-4fe0-b3a8-02677b251009",
+        "fields": {
+            "movie": "3538774b-eb10-4fc3-a9e5-4ee97ca83271",
+            "date": "2023-04-23",
+            "time": "18:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "6ddb52c7-153b-4cc9-82a4-c7fe7c2cf1f5",
+        "fields": {
+            "movie": "3538774b-eb10-4fc3-a9e5-4ee97ca83271",
+            "date": "2023-04-14",
+            "time": "16:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "ebc77934-91b7-46c7-b658-dec203443f25",
+        "fields": {
+            "movie": "3538774b-eb10-4fc3-a9e5-4ee97ca83271",
+            "date": "2023-04-26",
+            "time": "20:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "6efe45e7-7c1a-412c-b226-5ec07c4b2dcd",
+        "fields": {
+            "movie": "76975e51-0896-45a9-b4bf-44f712ec7f86",
+            "date": "2023-04-15",
+            "time": "18:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "f2052dc3-9eb7-4d4c-b472-6012d00b7a69",
+        "fields": {
+            "movie": "76975e51-0896-45a9-b4bf-44f712ec7f86",
+            "date": "2023-04-15",
+            "time": "22:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "8deda49e-151d-4ff4-91bd-e7996d2b2cd1",
+        "fields": {
+            "movie": "76975e51-0896-45a9-b4bf-44f712ec7f86",
+            "date": "2023-04-26",
+            "time": "16:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "228e7764-c833-4136-8860-6694d703c42b",
+        "fields": {
+            "movie": "76975e51-0896-45a9-b4bf-44f712ec7f86",
+            "date": "2023-04-23",
+            "time": "19:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "e9692383-5065-4b2d-a335-c4adf8c7051e",
+        "fields": {
+            "movie": "76975e51-0896-45a9-b4bf-44f712ec7f86",
+            "date": "2023-04-15",
+            "time": "21:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "3b839c74-ec61-4ea4-ba81-43d22a42fe97",
+        "fields": {
+            "movie": "1b5e0aeb-c369-4107-8d53-323a753851f0",
+            "date": "2023-04-15",
+            "time": "20:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "7e775f1e-b0ba-4c97-a107-0cafb4637d82",
+        "fields": {
+            "movie": "1b5e0aeb-c369-4107-8d53-323a753851f0",
+            "date": "2023-04-23",
+            "time": "16:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "73e29492-9211-43f0-a57f-5a3a0ecfd5c7",
+        "fields": {
+            "movie": "1b5e0aeb-c369-4107-8d53-323a753851f0",
+            "date": "2023-04-29",
+            "time": "18:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "1c7a5256-65c8-406d-bf1f-c0a1d8ded0c2",
+        "fields": {
+            "movie": "1b5e0aeb-c369-4107-8d53-323a753851f0",
+            "date": "2023-03-25",
+            "time": "20:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "0b79e603-fe19-4bbf-91d4-5e96ccb8d75f",
+        "fields": {
+            "movie": "1b5e0aeb-c369-4107-8d53-323a753851f0",
+            "date": "2023-04-25",
+            "time": "22:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "262fccdb-f309-4522-a4fb-373251592a87",
+        "fields": {
+            "movie": "5d01bf86-6b54-4d1a-95fa-0bf027bb6789",
+            "date": "2023-04-29",
+            "time": "20:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "d1ed2cc0-5881-4353-8a9e-4dd58100ae53",
+        "fields": {
+            "movie": "5d01bf86-6b54-4d1a-95fa-0bf027bb6789",
+            "date": "2023-04-25",
+            "time": "20:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "48e01f28-377a-47f3-b473-119c22ec62a5",
+        "fields": {
+            "movie": "5d01bf86-6b54-4d1a-95fa-0bf027bb6789",
+            "date": "2023-04-20",
+            "time": "16:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "14fdd944-80b7-475b-8b9d-ae5c85fb0eff",
+        "fields": {
+            "movie": "5d01bf86-6b54-4d1a-95fa-0bf027bb6789",
+            "date": "2023-04-22",
+            "time": "20:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "08db990f-0658-497f-a766-2bf00d6cb674",
+        "fields": {
+            "movie": "5d01bf86-6b54-4d1a-95fa-0bf027bb6789",
+            "date": "2023-04-21",
+            "time": "21:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "c03d63b8-ad15-42f8-9549-01cd428725d1",
+        "fields": {
+            "movie": "93caa114-4b73-4ba0-aadc-5e4a22344158",
+            "date": "2023-04-24",
+            "time": "18:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "2ce2737f-6bc5-43de-8f54-98c4e2495fd4",
+        "fields": {
+            "movie": "93caa114-4b73-4ba0-aadc-5e4a22344158",
+            "date": "2023-04-29",
+            "time": "20:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "fb6acfe0-69b5-4265-b7d5-58d0c99b5088",
+        "fields": {
+            "movie": "93caa114-4b73-4ba0-aadc-5e4a22344158",
+            "date": "2023-04-30",
+            "time": "18:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "88b5d268-9fe0-4ec1-acd7-32cadf83057f",
+        "fields": {
+            "movie": "93caa114-4b73-4ba0-aadc-5e4a22344158",
+            "date": "2023-04-28",
+            "time": "19:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "d2671a2b-ed79-45bc-8811-835d7eba1dc8",
+        "fields": {
+            "movie": "93caa114-4b73-4ba0-aadc-5e4a22344158",
+            "date": "2023-04-15",
+            "time": "18:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "2c26db38-5d6e-4ec5-ac44-3fda611dd442",
+        "fields": {
+            "movie": "6a8f1839-2539-470c-852c-8bbfd8991f5f",
+            "date": "2023-04-12",
+            "time": "18:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "4b4efa3b-a7ba-429f-8bce-5c60b4ef324a",
+        "fields": {
+            "movie": "6a8f1839-2539-470c-852c-8bbfd8991f5f",
+            "date": "2023-04-22",
+            "time": "16:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "e7261cd8-4af8-48f7-96a0-b14c1f28d0d3",
+        "fields": {
+            "movie": "6a8f1839-2539-470c-852c-8bbfd8991f5f",
+            "date": "2023-03-18",
+            "time": "16:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "4ecf970d-bd4c-4222-a02b-469c951ef5b6",
+        "fields": {
+            "movie": "6a8f1839-2539-470c-852c-8bbfd8991f5f",
+            "date": "2023-04-29",
+            "time": "20:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "7b914375-718d-41fd-80b7-76eee5b7c7d1",
+        "fields": {
+            "movie": "6a8f1839-2539-470c-852c-8bbfd8991f5f",
+            "date": "2023-03-20",
+            "time": "19:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "4b5f4eda-0a69-453a-88a8-35e6c750e28a",
+        "fields": {
+            "movie": "ca2a5389-ebd7-4462-a5e5-45b3972fda1d",
+            "date": "2023-04-22",
+            "time": "16:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "cc3b50ab-4d28-4687-8140-fde3f4dbb0da",
+        "fields": {
+            "movie": "ca2a5389-ebd7-4462-a5e5-45b3972fda1d",
+            "date": "2023-04-19",
+            "time": "13:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "da5c5f9d-012b-4b9e-a94e-19ad9922613d",
+        "fields": {
+            "movie": "ca2a5389-ebd7-4462-a5e5-45b3972fda1d",
+            "date": "2023-04-26",
+            "time": "14:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "0b5458bf-ed57-4a31-8a88-e674af50ed4d",
+        "fields": {
+            "movie": "ca2a5389-ebd7-4462-a5e5-45b3972fda1d",
+            "date": "2023-04-15",
+            "time": "16:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "ae222afb-bd57-4f0d-9ebb-b5dac75aa85b",
+        "fields": {
+            "movie": "ca2a5389-ebd7-4462-a5e5-45b3972fda1d",
+            "date": "2023-03-13",
+            "time": "18:00:00"
+        }
+    },
+
+
+
+
+
+
+
+    {
+        "model": "cinema.screening",
+        "pk": "f67d2442-583a-412f-ab01-a18c38ba01df",
+        "fields": {
+            "movie": "42904639-f4e0-4ee2-af1a-50c25d2cea24",
+            "date": "2023-04-12",
+            "time": "18:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "b8df2534-9c6c-4a36-9575-91fd44d209ce",
+        "fields": {
+            "movie": "42904639-f4e0-4ee2-af1a-50c25d2cea24",
+            "date": "2023-04-13",
+            "time": "20:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "7e1c32e1-4886-4365-ab82-2c16e2882377",
+        "fields": {
+            "movie": "42904639-f4e0-4ee2-af1a-50c25d2cea24",
+            "date": "2023-04-14",
+            "time": "19:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "05568992-ae77-4bf8-961f-8041951ee625",
+        "fields": {
+            "movie": "42904639-f4e0-4ee2-af1a-50c25d2cea24",
+            "date": "2023-04-15",
+            "time": "21:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "fdf43561-a167-4770-ba01-6f92cd82b1af",
+        "fields": {
+            "movie": "42904639-f4e0-4ee2-af1a-50c25d2cea24",
+            "date": "2023-04-21",
+            "time": "21:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "f842cc45-6bb6-4ad6-aca5-473afcb2f23b",
+        "fields": {
+            "movie": "172e6390-e195-430e-be07-9de7389f4324",
+            "date": "2023-04-11",
+            "time": "18:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "340601d0-8cf5-4c2e-85e9-1c806721e5a5",
+        "fields": {
+            "movie": "172e6390-e195-430e-be07-9de7389f4324",
+            "date": "2023-04-13",
+            "time": "21:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "bb20be49-9e37-4333-9f3f-3403cb93bb55",
+        "fields": {
+            "movie": "172e6390-e195-430e-be07-9de7389f4324",
+            "date": "2023-04-18",
+            "time": "20:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "f03a240b-3aca-41f2-9d99-20ba882af0fc",
+        "fields": {
+            "movie": "172e6390-e195-430e-be07-9de7389f4324",
+            "date": "2023-04-09",
+            "time": "20:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "92fb7e95-979c-400e-a088-c9b7850e1a98",
+        "fields": {
+            "movie": "172e6390-e195-430e-be07-9de7389f4324",
+            "date": "2023-04-17",
+            "time": "22:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "e7d05da5-c533-478e-94b0-44045e3990fa",
+        "fields": {
+            "movie": "b6b7b98b-e860-44e6-bbcc-d3e05c802f3d",
+            "date": "2023-04-11",
+            "time": "21:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "b1cb2b57-83b7-43d7-a114-601756a2201a",
+        "fields": {
+            "movie": "b6b7b98b-e860-44e6-bbcc-d3e05c802f3d",
+            "date": "2023-04-12",
+            "time": "20:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "d2b3dc45-f7c3-4e84-ae03-d88865b82929",
+        "fields": {
+            "movie": "b6b7b98b-e860-44e6-bbcc-d3e05c802f3d",
+            "date": "2023-04-14",
+            "time": "21:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "4bdb0777-c52f-4c93-b856-785599e636cc",
+        "fields": {
+            "movie": "b6b7b98b-e860-44e6-bbcc-d3e05c802f3d",
+            "date": "2023-04-16",
+            "time": "21:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "c620384e-4a3e-45bd-b44f-adffb96f98b7",
+        "fields": {
+            "movie": "b6b7b98b-e860-44e6-bbcc-d3e05c802f3d",
+            "date": "2023-04-14",
+            "time": "20:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "4e9e0ff1-adc5-4563-857f-2ffe4ed14fe7",
+        "fields": {
+            "movie": "262c652c-5718-4135-a805-9d3b9f92dc88",
+            "date": "2023-04-19",
+            "time": "18:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "fe2d48cb-3e5a-439b-9819-ebdbba2cee6f",
+        "fields": {
+            "movie": "262c652c-5718-4135-a805-9d3b9f92dc88",
+            "date": "2023-04-15",
+            "time": "16:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "e0080040-a166-4ce0-91df-e00e49f32cf4",
+        "fields": {
+            "movie": "262c652c-5718-4135-a805-9d3b9f92dc88",
+            "date": "2023-04-18",
+            "time": "17:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "d322a0e4-4876-43cc-b26e-3d4539a4eb68",
+        "fields": {
+            "movie": "262c652c-5718-4135-a805-9d3b9f92dc88",
+            "date": "2023-04-18",
+            "time": "22:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "46e3ace6-561a-40e5-a077-7df5e1cc1c77",
+        "fields": {
+            "movie": "262c652c-5718-4135-a805-9d3b9f92dc88",
+            "date": "2023-04-22",
+            "time": "18:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "a5eeabbf-5b7e-4ad1-81a5-7cbadfd9088e",
+        "fields": {
+            "movie": "8d8432c2-2456-412c-a9d3-3637f1bb301b",
+            "date": "2023-04-24",
+            "time": "20:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "c1f89948-045c-47ff-b4c1-49b2200d0580",
+        "fields": {
+            "movie": "8d8432c2-2456-412c-a9d3-3637f1bb301b",
+            "date": "2023-04-18",
+            "time": "21:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "0247face-47d4-4887-9a67-9a719c7b4b9c",
+        "fields": {
+            "movie": "8d8432c2-2456-412c-a9d3-3637f1bb301b",
+            "date": "2023-04-07",
+            "time": "16:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "c69ce351-29db-4bc0-82c8-415e5c0b71e6",
+        "fields": {
+            "movie": "8d8432c2-2456-412c-a9d3-3637f1bb301b",
+            "date": "2023-04-15",
+            "time": "20:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "612f8881-79cd-4114-91a3-954d9b9d6faf",
+        "fields": {
+            "movie": "8d8432c2-2456-412c-a9d3-3637f1bb301b",
+            "date": "2023-04-18",
+            "time": "22:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "fa8856eb-ab85-4c02-ac0a-f1df27abd78a",
+        "fields": {
+            "movie": "3538774b-eb10-4fc3-a9e5-4ee97ca83271",
+            "date": "2023-04-29",
+            "time": "21:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "94de89fc-5232-4156-b46b-c393c439f871",
+        "fields": {
+            "movie": "3538774b-eb10-4fc3-a9e5-4ee97ca83271",
+            "date": "2023-04-19",
+            "time": "21:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "d8eb5d58-b115-4fe0-b3a8-02677b251009",
+        "fields": {
+            "movie": "3538774b-eb10-4fc3-a9e5-4ee97ca83271",
+            "date": "2023-04-23",
+            "time": "18:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "6ddb52c7-153b-4cc9-82a4-c7fe7c2cf1f5",
+        "fields": {
+            "movie": "3538774b-eb10-4fc3-a9e5-4ee97ca83271",
+            "date": "2023-04-14",
+            "time": "16:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "ebc77934-91b7-46c7-b658-dec203443f25",
+        "fields": {
+            "movie": "3538774b-eb10-4fc3-a9e5-4ee97ca83271",
+            "date": "2023-04-26",
+            "time": "20:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "6efe45e7-7c1a-412c-b226-5ec07c4b2dcd",
+        "fields": {
+            "movie": "76975e51-0896-45a9-b4bf-44f712ec7f86",
+            "date": "2023-04-15",
+            "time": "18:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "f2052dc3-9eb7-4d4c-b472-6012d00b7a69",
+        "fields": {
+            "movie": "76975e51-0896-45a9-b4bf-44f712ec7f86",
+            "date": "2023-04-15",
+            "time": "22:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "8deda49e-151d-4ff4-91bd-e7996d2b2cd1",
+        "fields": {
+            "movie": "76975e51-0896-45a9-b4bf-44f712ec7f86",
+            "date": "2023-04-26",
+            "time": "16:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "228e7764-c833-4136-8860-6694d703c42b",
+        "fields": {
+            "movie": "76975e51-0896-45a9-b4bf-44f712ec7f86",
+            "date": "2023-04-23",
+            "time": "19:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "e9692383-5065-4b2d-a335-c4adf8c7051e",
+        "fields": {
+            "movie": "76975e51-0896-45a9-b4bf-44f712ec7f86",
+            "date": "2023-04-15",
+            "time": "21:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "3b839c74-ec61-4ea4-ba81-43d22a42fe97",
+        "fields": {
+            "movie": "1b5e0aeb-c369-4107-8d53-323a753851f0",
+            "date": "2023-04-15",
+            "time": "20:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "7e775f1e-b0ba-4c97-a107-0cafb4637d82",
+        "fields": {
+            "movie": "1b5e0aeb-c369-4107-8d53-323a753851f0",
+            "date": "2023-04-23",
+            "time": "16:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "73e29492-9211-43f0-a57f-5a3a0ecfd5c7",
+        "fields": {
+            "movie": "1b5e0aeb-c369-4107-8d53-323a753851f0",
+            "date": "2023-04-29",
+            "time": "18:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "1c7a5256-65c8-406d-bf1f-c0a1d8ded0c2",
+        "fields": {
+            "movie": "1b5e0aeb-c369-4107-8d53-323a753851f0",
+            "date": "2023-03-25",
+            "time": "20:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "0b79e603-fe19-4bbf-91d4-5e96ccb8d75f",
+        "fields": {
+            "movie": "1b5e0aeb-c369-4107-8d53-323a753851f0",
+            "date": "2023-04-25",
+            "time": "22:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "262fccdb-f309-4522-a4fb-373251592a87",
+        "fields": {
+            "movie": "5d01bf86-6b54-4d1a-95fa-0bf027bb6789",
+            "date": "2023-04-29",
+            "time": "20:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "d1ed2cc0-5881-4353-8a9e-4dd58100ae53",
+        "fields": {
+            "movie": "5d01bf86-6b54-4d1a-95fa-0bf027bb6789",
+            "date": "2023-04-25",
+            "time": "20:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "48e01f28-377a-47f3-b473-119c22ec62a5",
+        "fields": {
+            "movie": "5d01bf86-6b54-4d1a-95fa-0bf027bb6789",
+            "date": "2023-04-20",
+            "time": "16:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "14fdd944-80b7-475b-8b9d-ae5c85fb0eff",
+        "fields": {
+            "movie": "5d01bf86-6b54-4d1a-95fa-0bf027bb6789",
+            "date": "2023-04-22",
+            "time": "20:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "08db990f-0658-497f-a766-2bf00d6cb674",
+        "fields": {
+            "movie": "5d01bf86-6b54-4d1a-95fa-0bf027bb6789",
+            "date": "2023-04-21",
+            "time": "21:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "c03d63b8-ad15-42f8-9549-01cd428725d1",
+        "fields": {
+            "movie": "93caa114-4b73-4ba0-aadc-5e4a22344158",
+            "date": "2023-04-24",
+            "time": "18:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "2ce2737f-6bc5-43de-8f54-98c4e2495fd4",
+        "fields": {
+            "movie": "93caa114-4b73-4ba0-aadc-5e4a22344158",
+            "date": "2023-04-29",
+            "time": "20:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "fb6acfe0-69b5-4265-b7d5-58d0c99b5088",
+        "fields": {
+            "movie": "93caa114-4b73-4ba0-aadc-5e4a22344158",
+            "date": "2023-04-30",
+            "time": "18:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "88b5d268-9fe0-4ec1-acd7-32cadf83057f",
+        "fields": {
+            "movie": "93caa114-4b73-4ba0-aadc-5e4a22344158",
+            "date": "2023-04-28",
+            "time": "19:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "d2671a2b-ed79-45bc-8811-835d7eba1dc8",
+        "fields": {
+            "movie": "93caa114-4b73-4ba0-aadc-5e4a22344158",
+            "date": "2023-04-15",
+            "time": "18:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "2c26db38-5d6e-4ec5-ac44-3fda611dd442",
+        "fields": {
+            "movie": "6a8f1839-2539-470c-852c-8bbfd8991f5f",
+            "date": "2023-04-12",
+            "time": "18:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "4b4efa3b-a7ba-429f-8bce-5c60b4ef324a",
+        "fields": {
+            "movie": "6a8f1839-2539-470c-852c-8bbfd8991f5f",
+            "date": "2023-04-22",
+            "time": "16:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "e7261cd8-4af8-48f7-96a0-b14c1f28d0d3",
+        "fields": {
+            "movie": "6a8f1839-2539-470c-852c-8bbfd8991f5f",
+            "date": "2023-03-18",
+            "time": "16:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "4ecf970d-bd4c-4222-a02b-469c951ef5b6",
+        "fields": {
+            "movie": "6a8f1839-2539-470c-852c-8bbfd8991f5f",
+            "date": "2023-04-29",
+            "time": "20:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "7b914375-718d-41fd-80b7-76eee5b7c7d1",
+        "fields": {
+            "movie": "6a8f1839-2539-470c-852c-8bbfd8991f5f",
+            "date": "2023-03-20",
+            "time": "19:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "4b5f4eda-0a69-453a-88a8-35e6c750e28a",
+        "fields": {
+            "movie": "ca2a5389-ebd7-4462-a5e5-45b3972fda1d",
+            "date": "2023-04-22",
+            "time": "16:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "cc3b50ab-4d28-4687-8140-fde3f4dbb0da",
+        "fields": {
+            "movie": "ca2a5389-ebd7-4462-a5e5-45b3972fda1d",
+            "date": "2023-04-19",
+            "time": "13:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "da5c5f9d-012b-4b9e-a94e-19ad9922613d",
+        "fields": {
+            "movie": "ca2a5389-ebd7-4462-a5e5-45b3972fda1d",
+            "date": "2023-04-26",
+            "time": "14:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "0b5458bf-ed57-4a31-8a88-e674af50ed4d",
+        "fields": {
+            "movie": "ca2a5389-ebd7-4462-a5e5-45b3972fda1d",
+            "date": "2023-04-15",
+            "time": "16:00:00"
+        }
+    },
+    {
+        "model": "cinema.screening",
+        "pk": "ae222afb-bd57-4f0d-9ebb-b5dac75aa85b",
+        "fields": {
+            "movie": "ca2a5389-ebd7-4462-a5e5-45b3972fda1d",
+            "date": "2023-03-13",
+            "time": "18:00:00"
+        }
+    }
+]

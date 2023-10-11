@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Delete Screening - Movies@TUD
+{% endblock %}
+{% block content %}
+<div style="margin: 0 auto;">
+    <h1 class="text-center my_title fs-3 my-5">Delete Showtime</h1>
+    <div class="text-center mb-5">
+        <form action="{% url 'cinema:time_delete' screening.id %}" method="post">
+            {% csrf_token %}
+            <p class="">Are you sure you want to delete screening: <strong>"{{screening.date}} - {{screening.time}}"</strong> for movie: <strong>"{{screening.movie.name}}"?</strong></p>
+            <input class="" type="submit" value="Confirm">
+        </form> 
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+Edit Extra - Movies@TUD
+{% endblock %}
+{% block content %}
+<div class="container mt-4">
+    <br>
+    <div class="text-center">
+        <h1 class="mb-5 my_title fs-3">Edit {{extra.description}}</h1>
+        <form action="" method="post" enctype="multipart/form-data" class="m-auto" style="width: 400px;">{% csrf_token %}
+            <p>{{ form | crispy }}</p>
+            <br>
+            <input type="submit" value="Save">
+        </form>
+        <br><br>
+        {% endblock content %}
+    </div>
+</div>

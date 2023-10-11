@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+{% load embed_video_tags %}
+{% load static %}
+{% load auth_extras %}
+{% block metadescription %}
+{{ product.description|truncatewords:155 }}
+{% endblock %}
+{% block title %}
+{{ product.name }} - Movies@TUD
+{% endblock %}
+{% block content %}
+
+<style>
+    /** Trailer container **/
+
+    .body {
+        justify-content: center;
+    }
+
+    .skewed {
+        width: 75em;
+        color: #f1f1f1;
+        display: flex;
+        background: #111;
+        margin: 2em 10%;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+        border-radius: 10px;
+        justify-content: space-around;
+    }
+
+    .content {
+        padding: 1.5em;
+        width: 50%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .image_box {
+        position: relative;
+        overflow: hidden;
+        border-radius: 5px;
+    }
+
+    .image_box::before {
+        content: '';
+        position: absolute;
+        left: -6.1em;
+        top: 50%;
+        transform: translateY(-50%) translateX(-65px) rotate(20deg);
+        background: #111;
+        width: 40%;
+        height: 140%;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 1);
+    }
+
+    /** Review **/
+    .comment {
+        width: 200%;
+        height: 150px;
+    }
+
+    .comment-section {
+        margin-left: 6%;
+    }
+
+    .comments {
+        padding-left: 7px;
+        background: transparent;
+    }
+</style>
+
+<body>
+    <section class="skewed">
+        <div class="content">
+            <p class="my_prod_title">{{product.name}}</p>
+            
+            {% if product.overall_rating > 0 %}
+                <h5 class="my_title">Rating: {{ product.overall_rating }}/5.0</h5>
+            {% endif %}
+            <br>
+            <p class="text-justify my_prod_text">{{product.description}}</p>
+            <p><strong>Genre(s): </strong>{% for cat in product.category.all %} {{cat.name}}, {% endfor %}</p>
+            <p><strong>Director: </strong>{{product.director}}</p>
+            <p><strong>Cast: </strong>{{product.cast}}</p>
+            <p><strong>Duration: </strong>{{product.length}}</p>
+
+            <a class="btn btn-primary" href="{% url 'cinema:select_time' product.id %}">View Showtimes</a>
+            {% if user|has_group:"Admin" %}
+                <div class="mt-4">
+                    <a href="{% url 'cinema:movie_edit' product.id %}" class="btn btn-danger mb-1">Edit Movie</a>
+                    <br>
+                    <a href="{% url 'cinema:movie_delete' product.id %}" class="btn btn-danger">Delete Movie</a>
+                </div>
+            {% endif %}
+        </div>
+
+        {% if user|has_group:"Admin" %}
+        <div class="image_box">
+            <p class="text-justify">{% video product.trailer 'large' %}</p>
+        </div>
+        {% else %}
+        <div class="image_box">
+            <p class="text-justify">{% video product.trailer 'medium' %}</p>
+        </div>
+        {% endif %}
+    </section>
+
+    <section class="comment-section">
+        <div class="container-sm bg-transparent rounded p-2 text-light mt-3 w-25 text-left ms-5">
+            <br><br><br>
+            <h2>Leave a review here</h2>
+            {% if request.user.is_authenticated %}
+            <form method="post" action="." class="row">
+                {% csrf_token %}
+                <div class="mt-3">
+                    <h7>Rating:</h7>
+                    <select name="rating" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="text-left mt-3">
+                    <h7>Comment:</h7>
+                    <br>
+                    <textarea class="comment form-control bg-dark border-dark text-light" name="comment"
+                        required></textarea>
+                </div>
+                <div class="mt-4 col">
+                    <button class="btn btn-success">Submit</button>
+                </div>
+            </form>
+            {% endif %}
+        </div>
+        <div class="comments ms-5 container-fluid mt-4">
+            <div class="row w-25">
+                {% for reviews in product.reviews.all %}
+                <div class="m-3 rounded p-4 col bg-transparent border border-secondary text-light">
+                    <h5>{{reviews.created_by}}</h5>
+                    <h6>{{ reviews.time_created|date:"d-m-Y" }} &nbsp; &nbsp; &nbsp;</h6>
+                    <br>
+                    <h6>Rating: {{ reviews.rating }}/5</h6>
+                    <br>
+                    {{ reviews.comment }}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        </div>
+        </div>
+        {% endblock %}
+    </section>
+
+</body>

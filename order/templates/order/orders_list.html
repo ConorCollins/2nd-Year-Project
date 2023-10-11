@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+Order History - Movies@TUD
+{% endblock %}
+{% block content %}
+<div class="text-white" style="width: 75%; margin: 0 auto;">
+    <div class="text-center text-white">
+        <br><br>
+        <h1 class="text-center my_title">Order History</h1>
+        <br>
+        {% if order_details %}
+        <table class="table table-striped text-white">
+            <thead class="text-white">
+                <tr class="text-white">
+                    <th>Order Number</th>
+                    <th>Order Date</th>
+                    <th>Total Amount</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+                <br>
+            </thead>
+            <tbody class="text-white">
+                {% for order in order_details %}
+                <tr class="text-white">
+                    <td class="text-white">{{ order.id }}</td>
+                    <td class="text-white">{{ order.created|date:"d M Y" }}</td>
+                    <td class="text-white">€{{ order.total }}</td>
+                    <td class="text-white"><i class="fas fa-check" style="color: rgb(71, 245, 71);"></i>&nbsp;Complete</td>
+                    <td class="text-white"><a href="{% url 'order:order_detail' order.id %}">View order</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p>You have not placed any orders yet.<br><br><a href="{% url 'cinema:all_products' %}"
+                class="btn btn-secondary">Continue shopping</a></p>
+        {% endif %}
+    </div>
+</div>
+<br>
+<br>
+{% endblock %}

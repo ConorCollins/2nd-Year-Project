@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+Thanks - Movies@TUD
+{% endblock %}
+{% block content %}
+<div>
+    <div class="text-center">
+        <br>
+        <br>
+        <h1 class="text-center my_title">
+            Thanks for placing your order
+        </h1>
+        <br>
+        <br>
+        <p>Order Number: <b>{{ customer_order.id }}</b></p>
+        <br>
+        <p>
+            Thank you for choosing Movies @ TUD.<br> Your order has been received.<br><br>Please provide your Order Number at the kiosk to receive your ticket. 
+        </p>
+    </div>
+    <br><br><br>
+    <div class="text-center">
+        <p>View your order here.</p>
+        <a class="fs-5" href="{% url 'order:order_history' %}" >Order History</a>
+    </div>
+</div>
+<br>
+<br><br><br><br><br><br><br><br><br><br>
+{% endblock %}

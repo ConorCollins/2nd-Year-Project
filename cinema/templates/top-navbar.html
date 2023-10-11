@@ -1,0 +1,54 @@
+{% load static %}
+{% load auth_extras %}
+<div class="my_custom_menu bg-black">
+    <div class="my_logo text-align left mt-3 mb-5">
+        <a href="{% url 'cinema:all_products' %}"><img src="{% static 'images/Logo.png' %}" width="400" height="60" alt="Logo"></a>
+    </div>
+    <ul class="mt-4">
+        {% if user.is_authenticated %}
+
+            {% if user|has_group:"Admin" %}
+                <li>
+                    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ADMIN</a>
+                    <div class="dropdown-menu dropdown-menu-right bg-black border-light">
+                        <a href="{% url 'cinema:category_new' %}" class="dropdown-item">Add Genre</a>
+                        <a href="{% url 'cinema:movie_new' %}" class="dropdown-item">Add Movie</a>
+                        <a href="{% url 'cinema:time_new' %}" class="dropdown-item">Add Screening</a>
+                        <a href="{% url 'extras:extra_create' %}" class="dropdown-item">Add Extra</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ user.username }}<i class="fas fa-user-circle"></i></a>
+                    <div class="dropdown-menu dropdown-menu-right bg-black border-light">
+                        <a href="{% url 'order:order_history' %}" class="dropdown-item">Order History</a>
+                        <a href="{% url 'edit_profile' %}" class='dropdown-item'>Edit Profile</a>
+                        <a href="{% url 'password_change' %}" class='dropdown-item'>Change Password</a>
+                        <a href="{% url 'password_reset' %}" class='dropdown-item'>Reset Password</a>
+                        <a href="{% url 'logout' %}" class='dropdown-item'>Sign Out</a>
+                    </div>
+                </li>
+            {% else %}
+                <li>
+                    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ user.username }}<i class="fas fa-user-circle"></i></a>
+                    <div class="dropdown-menu dropdown-menu-right bg-black border-light">
+                        <a href="{% url 'order:order_history' %}" class="dropdown-item">Order History</a>
+                        <a href="{% url 'edit_profile' %}" class='dropdown-item'>Edit Profile</a>
+                        <a href="{% url 'password_change' %}" class='dropdown-item'>Change Password</a>
+                        <a href="{% url 'password_reset' %}" class='dropdown-item'>Reset Password</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="{% url 'logout' %}">Sign Out <i class="fas fa-sign-out-alt"></i></a>
+                </li>
+            {% endif %}
+
+        {% else %}
+            <li>
+                <a href="{% url 'signup' %}">Sign Up<i class="fas fa-user-plus"></i></a>
+            </li>
+            <li>
+                <a href="{% url 'login' %}">Sign In<i class="fas fa-sign-in-alt"></i></a>
+            </li>
+        {% endif %}
+    </ul>
+</div>

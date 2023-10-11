@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load auth_extras %}
+{% block title %}Extras - Movies@TUD{% endblock %}
+{% block content %}
+
+<div class="container text-center">
+    <br><br>
+
+    <h2>Would you like to add any food/drinks?</h2>
+    <!--<a href="{% url 'cart:cart_detail' %}"><button>No thanks</button></a>-->
+    <br>
+
+    <table class="center extras">
+        <tr class="mb-4">
+            <th></th>
+            <th class="h5">DESCRIPTION</th>
+            <th class="h5">PRICE</th>
+            <th>
+                <div class="mx-auto">
+                    {% if prods.paginator.num_pages > 1 %}
+                    <div class="text-center">
+                        {% for pg in prods.paginator.page_range %}
+                        <a href="?page={{pg}}"
+                            class="btn btn-sm btn-light invis_bg text-white {%if products.number == pg %}active{% endif %}">{{pg}}</a>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+            </th>
+
+            <!--
+            {% if user|has_group:"Admin" %}
+                <th><a href="{% url 'extras:extra_create' %}"><button class="btn btn-warning">Add New Extra</button></a></th>
+            {% endif %}
+            -->
+            
+        </tr>
+        <tr></tr>
+
+    
+        {% for product in prods %}
+        <tr>
+
+            <td><img src="{{product.image.url}}" alt="{{product.name}}" width=100 height=100></td>
+            <td>{{product.description}}</td>
+            <td>€{{product.price}}</td>
+
+            {% if request.user.is_authenticated %}
+                {% if product.stock == 0 %}
+                    <td>Out of Stock</td>
+                {% else %}
+                    <td><a href="{% url 'cart:extra_add_cart' product.id %}"><button class="btn btn-outline-light">Add to Cart</button></a></td>
+                {% endif %}
+
+                {% if user|has_group:"Admin" %}
+                    <td><a href="{% url 'extras:extra_edit' product.id %}"><button class="btn btn-light">Edit Extra</button></a></td>
+                    <td><a href="{% url 'extras:extra_delete' product.id %}"><button class="btn btn-danger">Delete Extra</button></a></td>
+                {% endif %}
+            {% endif %}
+        </tr>
+        {% endfor %}
+
+        <br><br>
+    </table>
+    <br>
+    {% if request.user.is_authenticated %}
+        <div style="float: center;">
+            <a href="{% url 'cart:cart_detail' %}"><button class="btn btn-success">Proceed to Cart</button></a>
+        </div><br>
+    {% endif %}
+        
+    <br><br>
+</div>
+{% endblock %}
+

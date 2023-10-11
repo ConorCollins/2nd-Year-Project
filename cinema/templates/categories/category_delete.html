@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Delete Genre - Movies@TUD
+{% endblock %}
+{% block content %}
+<h1 class="text-center my_title fs-3 my-5">Delete Genre</h1>
+<div class="text-center mb-5">
+    <form action="" method="post">
+        {% csrf_token %}
+        <p class="">Are you sure you want to delete <strong>"{{category.name}}"</strong> genre?</p>
+        <input class="" type="submit" value="Confirm">
+    </form> 
+</div>
+{% endblock content %}

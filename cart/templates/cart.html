@@ -1,0 +1,264 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block metadescription %}
+This is the shopping cart page. Proceed to review your items and place the order.
+{% endblock %}
+{% block title %}
+Cart - Movies@TUD
+{% endblock %}
+{% block content %}
+<style>
+    td {
+        color: white;
+    }
+</style>
+<br>
+
+{% if not request.user.is_authenticated %}
+<body class="text-white">
+    <div>
+        <div class="text-center">
+            <br>
+            <h1 class="text-center my_title">
+                Please log in in to add items to your cart.
+            </h1>
+            <br>
+            <p class="text-center">
+                <a href="{% url 'login' %}"><button class="btn btn-light">Sign-In</button></a> <a href="{% url 'signup' %}"><button class="btn btn-light">Sign-Up</button></a>
+            </p>
+        </div>
+    </div>
+
+{% elif empty %}
+
+<body class="text-white">
+    <div>
+        <div class="text-center">
+            <br>
+            <h1 class="text-center my_title">
+                Your shopping cart is empty.
+            </h1>
+            <br>
+            <p class="text-center">
+                Please click <a href="{% url 'cinema:all_products' %}">here</a> to browse movies.
+            </p>
+        </div>
+    </div>
+
+    {% else %}
+    <div class="container ml-5">
+        <div>
+            <div class="text-center">
+                <br>
+                <br>
+            </div>
+        </div>
+        <div class="">
+            <div class="">
+                <table class="table">
+                    <thead class="my_custom_thead text-center">
+                        <tr>
+                            <th colspan="6">
+                                Movie
+                            </th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        {% if not movie_cart_items %}
+                        <td class="text-center">
+                            <b class="fs-5">You have not selected a movie.</b>
+                            <p>Click <a href="{% url 'cinema:all_products' %}">here</a> to browse movies.</p>
+                        </td>
+                        {% else %}
+
+                        {% for cart_item in movie_cart_items %}
+                        <tr>
+                            <td width="400px">
+                                <a href="{{cart_item.product.get_absolute_url}}"><img
+                                        src="{{cart_item.product.image.url}}" alt=""
+                                        class="float-left rounded custom_image"></a>
+                            </td>
+                            <td class="text-left" width="400px">
+                                <b class="my_title">{{cart_item.product.name}}</b>
+                                <p>{{cart_item.screening.date}} - {{cart_item.screening.time}}</p>
+                                Price per Seat: €10.00 <br>
+                                Seats: {% for seat in cart_item.seats.all %}{{seat}}, {% endfor %}
+                            </td>
+                            <td width="220px">
+                                <b>Subtotal</b><br><br>
+                                <p>€{{cart_item.sub_total}}0</p>
+                            </td>
+                            <td>
+                                <b>Add / Remove</b><br><br>
+                                <a href="{% url 'cinema:seat_selection' cart_item.screening.id %}" class="custom_a"><i
+                                        class="fas fa-plus-circle custom_icon"></i></a>&nbsp;
+                                <a href="{% url 'cart:movie_full_remove' cart_item.screening.id %}"
+                                    class="custom_icon"><i class="fas fa-trash-alt custom_icon"></i></a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                        {% endif %}
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="">
+                <div class="">
+                    <table class="table">
+                        <thead class="my_custom_thead text-center">
+                            <tr>
+                                <th colspan="6">
+                                    Extras
+                                </th>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            {% if not extra_cart_items %}
+                            <td class="text-center">
+                                <b class="fs-5">You have not selected any extras.</b>
+                                <p>Click <a href="{% url 'extras:all_extras' %}">here</a> if you would like to add any.
+                                </p>
+                            </td>
+                            {% else %}
+
+                            {% for cart_item in extra_cart_items %}
+                            <tr>
+                                <td width="400px">
+                                    <a href="{% url 'extras:all_extras' %}"><img src="{{cart_item.extra.image.url}}"
+                                            alt="" class="float-left rounded custom_image"></a>
+                                </td>
+                                <td width="400px">
+                                    <p><b class="my_title">{{cart_item.extra.description}}</b></p>
+                                    Unit Price: €{{cart_item.extra.price}} <br>
+                                    Qty: {{cart_item.quantity}}
+                                </td>
+                                <td width="220px">
+                                    <b>Subtotal</b><br><br>
+                                    <p>€{{cart_item.sub_total}}</p>
+                                </td>
+                                {% if cart_item.quantity < cart_item.extra.stock %} <td>
+                                    <b>Add / Remove</b><br><br>
+                                    <a href="{% url 'cart:extra_add_cart' cart_item.extra.id %}" class="custom_a"><i
+                                            class="fas fa-plus-circle custom_icon"></i></a>&nbsp;
+                                    <a href="{% url 'cart:extra_cart_remove' cart_item.extra.id %}" class="custom_a"><i
+                                            class="fas fa-minus-circle custom_icon"></i></a>&nbsp;
+                                    <a href="{% url 'cart:extra_full_remove' cart_item.extra.id %}"
+                                        class="custom_icon"><i class="fas fa-trash-alt custom_icon"></i></a>
+                                    </td>
+                                    {% else %}
+                                    <td>
+                                        &nbsp;<a href="{% url 'cart:extra_cart_remove' cart_item.extra.id %}"
+                                            class="custom_a"><i class="fas fa-minus-circle custom_icon"></i></a>&nbsp;
+                                        <a href="{% url 'cart:extra_full_remove' cart_item.extra.id %}"
+                                            class="custom_icon"><i class="fas fa-trash-alt custom_icon"></i></a>
+                                    </td>
+                                    <td></td>
+                                    {% endif %}
+                            </tr>
+                            {% endfor %}
+                            {% endif %}
+                        </tbody>
+                    </table>
+                    <br>
+
+                    <table class="my_custom_table table" style="width: 50%; margin: 0 auto;">
+                        <div class="text-center" style="width: 60%; margin: 0 auto;">
+                            <div>
+                                <thead class="my_custom_thead text-center">
+                                    <tr>
+                                        <th colspan="6">
+                                            Checkout
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="total fs-4 text-center">
+                                        <td class="num">
+                                            €{{ total|floatformat:"2" }}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </div>
+                        </div>
+                    </table>
+
+                </div>
+                <br>
+                <div class="text-center" style="width: 50%; margin: 0 auto;">
+                    <table class="my_custom_table table">
+                        <!--<thead class="my_custom_thead text-center">
+                            <tr>
+                                <th colspan="6">
+                                    Voucher
+                                </th>
+                            </tr>
+
+                        </thead>-->
+                        <tbody>
+                            <tr>
+                                {% if voucher %}
+                            <tr class="subtotal fs-5">
+                                <td>Total</td>
+                                <td colspan="2"></td>
+                                <td class="num">€{{ total_ori|floatformat:"2" }}</td>
+                            </tr>
+                            <tr class="fs-5">
+                                <td>
+                                    "{{ voucher.code }}" voucher
+                                    ({{ voucher.discount }}% off)
+                                </td>
+                                <td colspan="2"></td>
+                                <td class="num neg">
+                                    - €{{ discount|floatformat:"2" }}
+                                </td>
+                            </tr>
+                            <tr class="total fs-5">
+                                <td>Total After Discount</td>
+                                <td colspan="2"></td>
+                                <td class="num">
+                                    €{{ new_total|floatformat:"2" }}
+                                </td>
+                            </tr>
+                            {% endif %}
+                        </tbody>
+                    </table>
+                    <p>Apply a voucher</p>
+                    <form action="{% url 'vouchers:apply' %}" method="post">
+                        {% csrf_token %}
+                        {{ voucher_apply_form }}
+                        <input type="submit" value="Apply">
+                    </form>
+
+
+                    </tbody>
+                    </table>
+                </div>
+                <br>
+            </div>
+            {% if movie_cart_items %}
+            <div class="button-container">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                        data-key="{{ data_key }}" data-amount="{{ stripe_total }}" data-name="Movies@TUD"
+                        data-description="{{ description }}" data-image="{% static 'images/mini_logo_rounded.png' %}"
+                        data-locale="auto" data-currency="eur" data-shipping-address="true" data-billing-address="true"
+                        data-zip-code="true">
+                        </script>
+                </form>
+
+                <div class="mx-auto">
+                    <a href="{% url 'cinema:all_products' %}"
+                        class="btn btn-secondary btn-block my_custom_button">Continue Shopping</a>
+                </div>
+            </div>
+            {% endif %}
+
+            <br><br><br>
+</body>
+{% endif %}
+{% endblock %}
+</div>

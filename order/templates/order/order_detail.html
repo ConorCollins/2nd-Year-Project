@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+Order Details - Movies@TUD
+{% endblock %}
+{% block content %}
+<br>
+<div style="width: 65%; margin: 0 auto;">
+    <div class="text-center text-white">
+        <br>
+        <h1 class="text-center my_title text-white">Order Details</h1>
+        <br>
+        <table class="table table-bordered text-white">
+            <tr class="text-white">
+                <td class="text-left" colspan="2">
+                    <br><b>Order: </b> <b># {{ order.id }}</b><br><br>
+                    <b>Date: </b>{{ order.created|date:"d M Y" }}<br>
+                    <b>Order Total: </b>€{{ order.total }}<br>
+                    <b>Order Status: </b><i class="fas fa-check"></i><br>
+                <td class="text-left" colspan="2">
+                    <br><b>Billing Address Information: </b><br><br>
+                    <b>Name: </b>{{ order.billingName }}<br>
+                    <b>Address: </b>{{ order.billingAddress1 }} {{ order.billingCity }}<br>
+                    <b>Country: </b>{{ order.billingCountry }}<br><br>
+                </td>
+            </tr>
+            {% for item in order_items %}
+            <tr class="text-white">
+                <td>{{ item.product }}</td>
+                <td>{{ item.quantity }}</td>
+                <td>€{{ item.price }}</td>
+                <td>€{{ item.sub_total }}</td>
+            </tr>
+            {% endfor %}
+            <tr class="text-white">
+                <td class="text-right" colspan="3"><b>Total</b></td>
+                <td>€{{ order.total }}</td>
+            </tr>
+            <tr class="text-white">
+                <td class="text-left" colspan="6">
+                    <br><b>Payment Details: </b><br><br>
+                    This order #{{ order.id }} has been paid successfully via Stripe.
+                    <br><br>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<br><br><br><br><br><br><br><br><br><br>
+{% endblock content %}

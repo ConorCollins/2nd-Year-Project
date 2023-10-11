@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block metadescription %}
+This is the time selection page. Select from any of the available showtimes.
+{% endblock %}
+{% block title %}
+Screenings - {{movie.name}}
+{% endblock %}
+{% block content %}
+{% load auth_extras %}
+
+<div class="row my_prod_row_class">
+  <div class="container">
+    <br>
+    <div class="row">
+      <div class="col-10 col-sm-10 col-md-10 col-lg-4 text-center">
+        <h2>{{ movie.name }}</h2>
+        <div style="min-width: 18rem;">
+          <a class="img" href="{{movie.get_absolute_url}}"><img class="mt-5" src="{{movie.image.url}}" alt="{{movie.name}}"></a>
+        </div>
+      </div>
+      <div class="col-10 col-sm-10 col-md-10 col-lg-8 text-center">
+        <div class="container">
+          <h2>Screenings</h2>
+          <br>
+          <div class="row mx-auto mt-3">
+            {% for screening in screenings %}
+            <div class="col-4 mt-3">
+              <h6>{{ screening.date }}</h6>
+              <a href="{% url 'cinema:seat_selection' screening.id %}"><button type="button" class="btn btn-primary">{{ screening.time }}</button></a>
+              {% if user|has_group:"Admin" %}
+              <a href="{% url 'cinema:time_delete' screening.pk %}" class="btn btn-danger mx-1">Delete Time</a>
+              {% endif %}
+              <br><br>
+            </div>
+            {% empty %}
+            <h6>No showtimes available</h6>
+            {% endfor %}
+          </div>
+        </div>
+        <br>
+      </div>
+      <div>
+      </div>
+  </div>
+</div>
+</div>
+
+{% endblock %}
